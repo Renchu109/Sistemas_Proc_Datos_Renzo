@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body style="text-align: center; background-color: aquamarine;">
+    <h1>Formulario inscripción a TUP ciclo 2049</h1>
+    <hr>
+    <form>
+        <h2>Datos personales</h2>
+
+        <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+
+        <p></p>
+
+        <label for="apellido">Apellido</label>
+            <input type="text" id="apellido">
+
+        <p></p>
+
+        <label for="genero">Genero</label>
+
+        <p></p>
+
+        <label for="genero">Masculino</label>
+            <input type="radio" name="genero" value="masculino" id="genero1">
+
+        <label for="genero">Femenino</label>
+            <input type="radio" name="genero" value="femenino" id="genero1">
+
+        <label for="genero">Otro</label>
+            <input type="radio" name="genero" value="otro" id="genero1">
+
+        <p></p>
+
+        <label for="email">E-Mail</label>
+            <input type="email" id="email1">
+
+        <p></p>
+
+        <label for="password">Contraseña</label>
+            <input type="password" id="password1">
+
+        <p></p>
+
+        <hr>
+        <h2>Acerca de la carrera</h2>
+
+        <label for="fecha">Fecha</label>
+            <input type="date" id="date1">
+
+        <p></p>
+
+        <label for="url">URL válida</label>
+            <input type="url" id="url1">
+
+        <p></p>
+
+        <label for="select">Seleccione su lenguaje</label>
+        <select name="Lenguajes" id="select">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">JAVA</option>
+            <option value="python">Python</option>
+        </select>
+
+        <P></P>
+
+        <label for="lenguajes">Seleccione los que le gustaría aprender</label>
+        
+        <p></p>
+
+        <label for="lenguajes">HTML</label>
+            <input type="checkbox" name="lenguajes" value="html" id="checkbox1">
+        <p></p>
+        <label for="lenguajes">CSS</label>
+            <input type="checkbox" name="lenguajes" value="css" id="checkbox2">
+        <p></p>
+        <label for="lenguajes">JavaScript</label>
+            <input type="checkbox" name="lenguajes" value="javascript" id="checkbox3">
+        <p></p>
+        <label for="lenguajes">JAVA</label>
+            <input type="checkbox" name="lenguajes" value="java" id="checkbox4">
+        <p></p>
+        <label for="lenguajes">Python</label>
+            <input type="checkbox" name="lenguajes" value="python" id="checkbox5">
+        <p></p>
+
+        <button type="submit" onClick="muestraDatos()">Enviar y Mostrar</button>
+        <button type="reset">Borrar</button>
+
+    </form>
+
+    <script>
+
+        function muestraDatos(){
+            varnombre = document.getElementById("nombre").value;
+            varapellido = document.getElementById("apellido").value;
+            varemail = document.getElementById("email1").value;
+            varpassword = document.getElementById("password1").value;
+            varfecha = document.getElementById("date1").value;
+            varurl = document.getElementById("url1").value;
+            vargenero = document.getElementById("genero1").value;
+            varlenguaje = document.getElementById("select").value
+            varcheckbox1 = document.getElementById("checkbox1").value;
+            varcheckbox2 = document.getElementById("checkbox2").value;
+            varcheckbox3 = document.getElementById("checkbox3").value;
+            varcheckbox4 = document.getElementById("checkbox4").value;
+            varcheckbox5 = document.getElementById("checkbox5").value;
+
+            document.write("<h2 >Muestra de datos</h2>");
+            document.write("Nombre: " + varnombre + "</br>");
+            document.write("E-Mail: " + varemail + "</br>");
+            document.write("Contraseña: " + varpassword + "</br>");
+            document.write("Fecha: " + varfecha + "</br>");
+            document.write("URL: " + varurl + "</br>");
+            document.write("Género: " + vargenero + "</br>");
+            document.write("Lenguaje seleccionado: " + varlenguaje + "</br>");
+            document.write("Lenguaje1: " + varcheckbox1 + "</br>");
+            document.write("Lenguaje2: " + varcheckbox2 + "</br>");
+            document.write("Lenguaje3: " + varcheckbox3 + "</br>");
+            document.write("Lenguaje4: " + varcheckbox4 + "</br>");
+            document.write("Lenguaje5: " + varcheckbox5 + "</br>");
+            
+}
+
+    </script>
+
+    <hr>
+
+</body>
+<footer style="text-align: center;">
+    <h3>UTN-FRM 1953 - 2049</h3>
+</footer>
+</html>
